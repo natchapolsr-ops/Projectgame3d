@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddbv1t7ns4tgi"]
+
+[ext_resource type="PackedScene" uid="uid://kx8nf7hokp4i" path="res://asset/Idle.fbx" id="1_71dwi"]
+
+[node name="player" type="Node3D"]
+
+[node name="Idle" parent="." instance=ExtResource("1_71dwi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0528165, 0, -0.0103108)
