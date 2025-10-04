@@ -31,8 +31,8 @@ layout_mode = 2
 texture = SubResource("ImageTexture_g3eks")
 
 [node name="SkyMinecraft1" type="Sprite2D" parent="CenterContainer/VBoxContainer/TextureRect"]
-position = Vector2(43, 72)
-scale = Vector2(0.31311, 0.421586)
+position = Vector2(72.875, 84.875)
+scale = Vector2(0.327698, 0.436487)
 texture = ExtResource("3_mhnvy")
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
