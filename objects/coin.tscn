@@ -45,14 +45,11 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_wqkpw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xkafy"]
-albedo_color = Color(0.94070613, 0.8365553, 0.532531, 1)
+albedo_color = Color(0.940706, 0.836555, 0.532531, 1)
 albedo_texture = ExtResource("2_04qt4")
 rim_enabled = true
 rim = 0.4
 rim_tint = 0.8
-stencil_flags = 2
-stencil_color = Color(0.77665097, 0.44749326, 0.13616946, 1)
-stencil_outline_thickness = 0.04
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_bnkeq"]
 

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba7inu36ga141"]
+
+[ext_resource type="PackedScene" uid="uid://04obrwgjem7j" path="res://objects/Rock.glb" id="1_xl5pk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pb2va"]
+size = Vector3(1.23816, 1, 1.18018)
+
+[node name="Meteorite" type="Node3D"]
+
+[node name="Root Scene" parent="." instance=ExtResource("1_xl5pk")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(2.04951, 0, 0, 0, 0.222527, 0, 0, 0, 1.7788, -0.0331493, 0.675507, -0.26389)
+shape = SubResource("BoxShape3D_pb2va")

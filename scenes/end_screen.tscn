@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7y3qa1tmyo0t"]
+
+[ext_resource type="Script" uid="uid://dnly551a3ry2s" path="res://scripts/end_screen.gd" id="1_87vmq"]
+[ext_resource type="Texture2D" uid="uid://biytlowgy376b" path="res://asset/sky_minecraft5.jpg" id="1_jc7ji"]
+[ext_resource type="FontFile" uid="uid://bdoctre03acqm" path="res://asset/Kanit-Regular.ttf" id="2_87vmq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vj8vg"]
+font = ExtResource("2_87vmq")
+font_size = 40
+font_color = Color(0.610299, 0.614144, 1, 1)
+outline_color = Color(0, 0, 0, 1)
+
+[node name="End" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_87vmq")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1279.0
+offset_bottom = 723.0
+mouse_filter = 2
+texture = ExtResource("1_jc7ji")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -278.0
+offset_top = 15.0
+offset_right = 377.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Congratulation! You Finish the game!"
+label_settings = SubResource("LabelSettings_vj8vg")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.483
+anchor_top = 0.614
+anchor_right = 0.573
+anchor_bottom = 0.657
+offset_left = -0.23999
+offset_top = -0.0800171
+offset_right = -0.440002
+offset_bottom = -0.0400085
+text = "Back to menu"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.513
+anchor_top = 0.706
+anchor_right = 0.542
+anchor_bottom = 0.749
+offset_left = 0.359985
+offset_top = -0.320007
+offset_right = 0.239929
+offset_bottom = -0.280029
+text = "Exit
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

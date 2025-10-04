@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqei60fckab4y"]
+
+[ext_resource type="Script" uid="uid://bh3nxpm2rlqm5" path="res://scripts/meteorite_falling.gd" id="1_ln536"]
+[ext_resource type="PackedScene" uid="uid://c0va82u0g2y0t" path="res://objects/Probodobodyne.glb" id="2_ndvbs"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mu37w"]
+size = Vector3(1.44775, 1, 1.29834)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_htuj2"]
+size = Vector3(2.07104, 0.696777, 1.44043)
+
+[node name="Meteorite_falling" type="Node3D"]
+script = ExtResource("1_ln536")
+
+[node name="Probodobodyne" parent="." instance=ExtResource("2_ndvbs")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(3.03377, 0, 0, 0, 0.654836, 0, 0, 0, 3.03377, -0.00287199, 0.578286, -0.0805475)
+shape = SubResource("BoxShape3D_mu37w")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(2, 0, 0, 0, 0.466966, 0, 0, 0, 2.3, 0.0314941, 0.811293, 0.0752442)
+shape = SubResource("BoxShape3D_htuj2")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

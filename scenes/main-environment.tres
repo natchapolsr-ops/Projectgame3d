@@ -1,9 +1,6 @@
-[gd_resource type="Environment" load_steps=4 format=3 uid="uid://bqnqgflivjvue"]
-
-[ext_resource type="Texture2D" uid="uid://bkuiti4r5f7n0" path="res://asset/sky_minecraft2.jpg" id="1_u3n42"]
+[gd_resource type="Environment" load_steps=3 format=3 uid="uid://bqnqgflivjvue"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_cme76"]
-panorama = ExtResource("1_u3n42")
 
 [sub_resource type="Sky" id="Sky_7bk1c"]
 sky_material = SubResource("PanoramaSkyMaterial_cme76")

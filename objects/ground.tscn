@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://iipkcygyssns"]
+
+[ext_resource type="PackedScene" uid="uid://cad32kvnj5l0p" path="res://objects/Ground.glb" id="1_ufjqo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_47mo5"]
+
+[node name="Ground" type="Node3D"]
+
+[node name="Root Scene" parent="." instance=ExtResource("1_ufjqo")]
+transform = Transform3D(0.0330019, 0, 0, 0, 0.0330019, 0, 0, 0, 0.0330019, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.840689, 0, 0, 0, 0.121483, 0, 0, 0, 0.792792, 0, -0.0200593, 0)
+shape = SubResource("BoxShape3D_47mo5")

@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://dj4lhc40ullcq"]
+
+[ext_resource type="Script" uid="uid://hvwb5ibifrkj" path="res://menu.gd" id="1_yqeox"]
+[ext_resource type="FontFile" uid="uid://bdoctre03acqm" path="res://asset/Kanit-Regular.ttf" id="2_con2f"]
+[ext_resource type="Texture2D" uid="uid://cd6geg5ssekeq" path="res://asset/sky_minecraft1.jpeg" id="3_mhnvy"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_g3eks"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4ytvr"]
+font = ExtResource("2_con2f")
+font_size = 45
+font_color = Color(0.327979, 0.712766, 1, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1277.0
+offset_bottom = 574.0
+script = ExtResource("1_yqeox")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 1278.0
+offset_bottom = 666.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+texture = SubResource("ImageTexture_g3eks")
+
+[node name="SkyMinecraft1" type="Sprite2D" parent="CenterContainer/VBoxContainer/TextureRect"]
+position = Vector2(43, 72)
+scale = Vector2(0.31311, 0.421586)
+texture = ExtResource("3_mhnvy")
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Get Higher"
+label_settings = SubResource("LabelSettings_4ytvr")
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_con2f")
+text = "Start"
+
+[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_con2f")
+text = "Exit"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]

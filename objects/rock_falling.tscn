@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2f4nw4kog8kj"]
+
+[ext_resource type="PackedScene" uid="uid://bgq4kuyg4fmre" path="res://objects/Floor Dirt Small.glb" id="1_oc37y"]
+[ext_resource type="Script" uid="uid://b8ic43i7wgkj6" path="res://scripts/rock_falling.gd" id="1_u10xc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oc37y"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u10xc"]
+size = Vector3(1.67908, 1, 1.41748)
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_u10xc")
+
+[node name="Root Scene" parent="." instance=ExtResource("1_oc37y")]
+transform = Transform3D(0.944617, 0, 0, 0, 0.944617, 0, 0, 0, 0.944617, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(0.944617, 0, 0, 0, 0.944617, 0, 0, 0, 0.944617, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1.63963, 0, 0, 0, 0.343938, 0, 0, 0, 1.63963, 0, -0.0851124, 0)
+shape = SubResource("BoxShape3D_oc37y")
+debug_color = Color(0.779026, 0, 0.0828192, 0.419608)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(0.944617, 0, 0, 0, 0.944617, 0, 0, 0, 0.944617, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1.26023, 0, 0, 0, 0.250132, 0, 0, 0, 1.27408, -0.00135969, -0.0911136, 0.000500539)
+shape = SubResource("BoxShape3D_u10xc")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
